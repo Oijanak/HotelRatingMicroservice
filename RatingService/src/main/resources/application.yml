@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:/data/mydata
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:  
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+  application:
+    name: RATING-SERVICE
+ 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8088/eureka
